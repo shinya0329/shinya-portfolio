@@ -1,0 +1,14 @@
+<div>
+  <% if @post.image.attached? %>
+    <%= image_tag @post.image %>
+  <% else %>
+  <% end %>
+  <p>ショップ名：<%= @post.shop_name %></p>
+  <p>説明：<%= @post.caption %></p>
+  <p>ユーザーネーム：<%= @post.user.name %></p>
+  <p>投稿日：<%= @post.created_at.strftime('%Y/%m/%d') %></p>
+  
+  <% if @post.user == current_user %>
+    <%= link_to "削除", post_path(@post), method: :delete %>
+  <% end %>
+</div>

@@ -1,0 +1,14 @@
+<% @posts.each do |post| %>
+  <div>
+    <%= link_to post_path(post.id) do %>
+        <% if post.image.attached? %>
+          <%= image_tag post.image %>
+        <% else %>
+           <!-- <%= image_tag 'no_image.jpg' %> -->
+        <% end %>
+    <% end %>
+    <p>ショップ名：<%= post.shop_name %></p>
+    <p>説明：<%= post.caption %></p>
+    <p>ユーザーネーム：<%= post.user.name %></p>
+  </div>
+<% end %>
