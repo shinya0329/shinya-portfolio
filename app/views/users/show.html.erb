@@ -1,5 +1,15 @@
 <div>
   <h3><%= @user.name %></h3>
+  
+  <% if @user.profile_image.attached? %>
+    <%= image_tag @user.profile_image, size: "100x100" %>
+  <% else %>
+  <% end %>
+
+  <% if @user.id == current_user.id %>
+    <p><%= link_to "プロフィール編集", edit_user_path(@user) %></p>
+  <% end %>
+
 </div>
 
 <% @posts.each do |post| %>
