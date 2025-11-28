@@ -1,0 +1,81 @@
+<header>
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" style="background-color: rgba(0,0,0,0)">
+    <div class="container">
+      <a class="navbar-brand text-light" href="/">
+        <span>Lime</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav ml-auto">
+          <% if user_signed_in? %>
+          <li class"nav-item">
+            <%= link_to user_path(current_user.id), class:"nav-link text-light" do %>
+              <i class="fas fa-home"></i>Home
+            <% end %>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-light" href="/users">
+              <i class="fas fa-link"></i>Users
+            </a>
+          </li>
+          <li class="nav-item">
+            <%=link_to posts_path, class:"nav-link text-light" do %>
+              <i class="fas fa-user-plus"></i>Posts
+            <% end %>
+          <li class"nav-item">
+            <a class="nav-link text-light" href="/categorys">
+              <i class="fas fa-home"></i>Categorys
+            </a>
+          </li>
+          </li>
+          <li class="nav-item">
+            <%= link_to new_post_path, class:"nav-link text-light" do %>
+              <i class="fas fa-user-plus"></i>New Post
+            <% end %>
+          </li>
+          <!--検索フォーム-->
+          <li class="nav-item d-flex align-items-center">
+            <%= form_with url: posts_path, method: :get, local: true, html: { class: "form-inline my-2 my-lg-0" } do |form| %>
+              <div class="input-group">
+                <%= form.text_field :keyword, placeholder: "Search", class: "form-control form-control-sm" %>
+                <div class="input-group-append">
+                  <%= form.submit "🔍", class: "btn btn-outline-light btn-sm" %>
+                </div>
+              </div>
+            <% end %>
+          </li>
+          
+          <li class="nav-item">
+            <a class="nav-link text-light" rel="nofollow" data-method="delete" href="/users/sign_out">
+              <i class="fas fa-sign-in-alt"></i>Log out
+            </a>
+          </li>
+          <% else %>
+          <li class"nav-item">
+            <a class="nav-link text-light" href="/">
+              <i class="fas fa-home"></i>Home
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-light" href="/home/about">
+              <i class="fas fa-link"></i>About
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-light" href="/users/sign_up">
+              <i class="fas fa-user-plus"></i>Sign up
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-light" href="/users/sign_in">
+              <i class="fas fa-sign-in-alt"></i>Log in
+            </a>
+          </li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>

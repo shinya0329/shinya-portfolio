@@ -1,34 +1,19 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>MyPortfolio</title>
+    <meta charset="UTF-8" />
+    <title>Portfolio</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
+    <script src="https://kit.fontawesome.com/3eed40c9ad.js" crossorigin="anonymous"></script>
+    <!--AOSのCDNの読み込み-->
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
-    <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-      <% if user_signed_in? %>
-      <li>
-        <%= link_to '投稿フォーム', new_post_path %>
-      </li>
-      <li>
-        <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
-      </li>
-      <li>
-        <%= link_to 'マイページ', user_path(current_user.id) %>
-      </li>
-    <% else %>
-      <li>
-        <%= link_to "新規登録", new_user_registration_path %>
-      </li>
-      <li>
-        <%= link_to "ログイン", new_user_session_path %>
-      </li>
-    <% end %>
+    <%= render 'layouts/header' %>
     <%= yield %>
+    <%= render 'layouts/footer' %>
   </body>
-</html>

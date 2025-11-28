@@ -1,0 +1,550 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+@import "bootstrap/scss/bootstrap";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pinyon+Script&display=swap');
+
+/* 共通CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+h1, .h1 {
+  font-size: calc(2rem + 1.5vw);
+}
+@media (min-width: 1200px) {
+  h1, .h1 {
+    font-size: 3rem;
+  }
+}
+
+h2, .h2 {
+  font-size: calc(1.325rem + 0.9vw);
+}
+@media (min-width: 1200px) {
+  h2, .h2 {
+    font-size: 2rem;
+  }
+}
+
+h3, .h3 {
+  font-size: calc(1.3rem + 0.6vw);
+}
+@media (min-width: 1200px) {
+  h3, .h3 {
+    font-size: 1.75rem;
+  }
+}
+
+h4, .h4 {
+  font-size: calc(1.275rem + 0.3vw);
+}
+@media (min-width: 1200px) {
+  h4, .h4 {
+    font-size: 1.5rem;
+  }
+}
+
+h5, .h5 {
+  font-size: 1.25rem;
+}
+
+h6, .h6 {
+  font-size: 1rem;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.page-section {
+  padding: 4rem 0;
+}
+.pagination>li>a {          
+  border: none;    
+  color: #fff;   
+  background-color: black;
+}
+
+.font-change {
+  font-family: "Pinyon Script", cursive;
+}
+/*// ここからFooterのCSS*/
+footer {
+  background: url("footer.jpg") no-repeat center center scroll; 
+  background-size: cover;
+}
+
+.footer-img {
+  background-color: rgba(0,0,0,0.9); color: #fff;
+}
+
+hr.footer-divider {
+  height: 0.1rem;
+  width: 90%;
+  margin: 0 auto;
+  background-color: #fff;
+  opacity: 1;
+}
+
+.social-icons a {
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icons a:hover {
+  transform: scale(1.5);
+  color: #ffcc00;
+}
+
+/*ここまで*/
+
+/*ここからTop画面のCSS*/
+.main-top {
+  position: relative;
+  height: 100vh;
+  min-height: 400px;
+  background: url(photo3.jpg) #2a5555 no-repeat center center scroll;
+  background-size: cover;
+}
+.site-name {
+  font-family: "Pinyon Script", cursive;
+  font-size: calc(5rem + 2vw);
+}
+.my-name {
+  font-family: "Pinyon Script", cursive;
+  font-size: 2rem;
+}
+
+.fadeInDown {
+  animation: fadeInDown 2s ease;
+}
+
+.fadeInUp {
+  animation: fadeInUp 2s ease;
+}
+
+@keyframes fadeInDown {
+  0% { opacity: 0; transform: translateY(-20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+hr.top-divider {
+  height: 0.1rem;
+  width: 100%;
+  margin: 0 auto;
+  background-color: #fff;
+  opacity: 1;
+}
+
+.btn-Sign-Up {
+  background-color: rgba(26, 237, 34, 0.6);
+  color: white;
+}
+.btn-Sign-Up:hover {
+  background-color: green;
+  color: white;
+}
+.btn-Log-in {
+  background-color: rgba(0, 102, 255, 0.6);
+  color: #fff;
+}
+.btn-Log-in:hover {
+  background-color: blue;
+  color: #fff;
+}
+
+/*ここまで*/
+
+/*ここからabout画面のCSS*/
+
+.jumbotron-about {
+  position: relative;
+  height: 80vh;
+  min-height: 250px;
+  background: url(photo4.jpg) no-repeat center center;
+  background-size: cover;
+}
+.proverb {
+  position: relative;
+  top: 40%;
+}
+
+.page-section {
+  padding: 4rem 0;
+}
+
+hr.divider {
+  height: 0.1rem;
+  width: 90%;
+  margin: 0 auto;
+  background-color: #fff;
+  opacity: 1;
+}
+/*ここまで*/
+
+/*ここから新規登録画面のCSS*/
+.main-sign-up {
+  position: relative;
+  height: 100%;
+  min-height: 400px;
+  background: url(photo5.jpg) #2a5555 no-repeat center center scroll;
+  background-size: cover;
+}
+/*ここまで*/
+
+/*ここからログイン画面のCSS*/
+.main-log-in {
+  position: relative;
+  height: 100%;
+  min-height: 400px;
+  background: url(photo6.jpg) #2a5555 no-repeat center center scroll;
+  background-size: cover;
+}
+/*ここまで*/
+
+/*ここからTop画面,sign-up画面,log-in画面,Users画面共通のＣＳＳ*/
+.masthead {
+  position: relative;
+  overflow: hidden;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.masthead:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.masthead .masthead-content {
+  position: relative;
+  max-width: 40rem;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+.masthead .masthead-content h1, .masthead .masthead-content .h1 {
+  font-size: 3.5rem;
+}
+.masthead .masthead-content p {
+  font-size: 2.5rem;
+}
+
+@media (min-width: 992px) {
+  .masthead {
+    height: 100%;
+    width: 75vw;
+    min-height: 0;
+    padding-bottom: 0;
+  }
+  .masthead:before {
+    transform: skewX(-9deg);
+    transform-origin: top right;
+  }
+  .masthead .masthead-content {
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 3rem;
+  }
+  .masthead .masthead-content h1, .masthead .masthead-content .h1 {
+    font-size: 4rem;
+  }
+  .masthead .masthead-content p {
+    font-size: 2rem;
+  }
+}
+@media (min-width: 1200px) {
+  .masthead {
+    width: 65vw;
+  }
+}
+.social-icons {
+  position: relative;
+  z-index: 2;
+}
+.social-icons .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  height: 4rem;
+  width: 4rem;
+  border-radius: 100rem;
+}
+
+@media (min-width: 992px) {
+  .social-icons {
+    position: absolute;
+    height: 100%;
+    top: 0;
+    right: 2.5rem;
+    width: auto;
+  }
+}
+
+#collection .product-info {
+  top: 10px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  transition: 0.7s ease-in-out;
+  cursor: pointer;
+  transform: rotate(5deg);
+}
+#collection .collection-item:hover .product-info {
+  top: 0;
+  opacity: 1;
+  transform: rotate(0);
+  background-color: rgba(0,0,0,0.7);
+}
+#collection .border {
+  width: 96%;
+  height: 96%;
+} 
+
+
+/*ここまで*/
+
+/*投稿一覧画面のCSS*/
+.main-posts {
+  height: 100%;
+  position: relative;
+  background: url("photo8.jpg") #2a5555 no-repeat center center scroll;
+  background-size: cover;
+}
+
+.user-icon {
+    position: relative;
+    margin: -65px 0 25px 0;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    border-radius: 100px;
+}
+
+.user-item:hover .user-icon {
+    color: #FFFFFF;
+    background: var(--primary);
+}
+
+.pagination {
+  justify-content: center;
+  background-color:  #1E1E1F;
+  padding-bottom: 5rem;
+  margin-bottom: 0;
+}
+
+.featured-text {
+  padding: 1rem 0 1rem 2rem;
+  border-left: 0.5rem solid white;
+}
+/*ここまで*/
+
+/*ここからuser一覧画面CSS*/
+.main-User {
+  height: 100%;
+  position: relative;
+  background: url("photo2.jpg") #2a5555 no-repeat center center scroll;
+  background-size: cover;
+}
+.jumbotron-users {
+  position: relative;
+  height: 40vh;
+  min-height: 250px;
+  background: url("photo4.jpg") no-repeat center center;
+  background-size: cover;
+}
+/*ここまで*/
+
+/*ここからuser詳細CSS*/
+.bg-image-full {
+  background: url("user-top.jpg") no-repeat;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: center;
+  background-size: cover;
+}
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+#portfolio .container-fluid, #portfolio .container-sm, #portfolio .container-md, #portfolio .container-lg, #portfolio .container-xl, #portfolio .container-xxl {
+  max-width: 1920px;
+}
+#portfolio .container-fluid .portfolio-box, #portfolio .container-sm .portfolio-box, #portfolio .container-md .portfolio-box, #portfolio .container-lg .portfolio-box, #portfolio .container-xl .portfolio-box, #portfolio .container-xxl .portfolio-box {
+  position: relative;
+  display: block;
+}
+
+#portfolio .container-fluid .portfolio-box .portfolio-box-caption, #portfolio .container-sm .portfolio-box .portfolio-box-caption, #portfolio .container-md .portfolio-box .portfolio-box-caption, #portfolio .container-lg .portfolio-box .portfolio-box-caption, #portfolio .container-xl .portfolio-box .portfolio-box-caption, #portfolio .container-xxl .portfolio-box .portfolio-box-caption {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  opacity: 0;
+  color: #fff;
+  background: rgba(0,0,0, 0.7);
+  transition: opacity 0.25s ease;
+  text-align: center;
+}
+#portfolio .container-fluid .portfolio-box .portfolio-box-caption .project-category, #portfolio .container-sm .portfolio-box .portfolio-box-caption .project-category, #portfolio .container-md .portfolio-box .portfolio-box-caption .project-category, #portfolio .container-lg .portfolio-box .portfolio-box-caption .project-category, #portfolio .container-xl .portfolio-box .portfolio-box-caption .project-category, #portfolio .container-xxl .portfolio-box .portfolio-box-caption .project-category {
+  font-family: "Merriweather Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+#portfolio .container-fluid .portfolio-box .portfolio-box-caption .project-name, #portfolio .container-sm .portfolio-box .portfolio-box-caption .project-name, #portfolio .container-md .portfolio-box .portfolio-box-caption .project-name, #portfolio .container-lg .portfolio-box .portfolio-box-caption .project-name, #portfolio .container-xl .portfolio-box .portfolio-box-caption .project-name, #portfolio .container-xxl .portfolio-box .portfolio-box-caption .project-name {
+  font-size: 1.2rem;
+}
+#portfolio .container-fluid .portfolio-box:hover .portfolio-box-caption, #portfolio .container-sm .portfolio-box:hover .portfolio-box-caption, #portfolio .container-md .portfolio-box:hover .portfolio-box-caption, #portfolio .container-lg .portfolio-box:hover .portfolio-box-caption, #portfolio .container-xl .portfolio-box:hover .portfolio-box-caption, #portfolio .container-xxl .portfolio-box:hover .portfolio-box-caption {
+  opacity: 1;
+}
+/*ここまで*/
+/*カテゴリー一覧画面のCSS*/
+.main-categorys {
+  height: 100%;
+  position: relative;
+  background: url("category_top.jpg") #2a5555 no-repeat center center scroll;
+  background-size: cover;
+}
+/*ここまで*/
+/*カテゴリー詳細画面のCSS*/
+.main-category {
+  height: 100%;
+  position: relative;
+  background: url("category.jpg") #2a5555 no-repeat center center scroll;
+  background-size: cover;
+}
+/*ここまで*/
+/*japanesefoodのCSS*/
+.japanesefood {
+  height: 100%;
+  position: relative;
+  background: url("category-japan.jpg") #2a5555 no-repeat center center scroll;
+  background-size: cover;
+}
+/*ここまで*/
+/*WesternCuisianのCSS*/
+.western {
+  height: 100%;
+  position: relative;
+  background: url("category-western.jpg") #2a5555 no-repeat center center scroll;
+  background-size: cover;
+}
+/*ここまで*/
+/*中華料理のCSS*/
+.chinese {
+  height: 100%;
+  position: relative;
+  background: url("category-china.jpg") #2a5555 no-repeat center center scroll;
+  background-size: cover;
+}
+/*ここまで*/
+/*アジア料理のCSS*/
+.asianFood {
+  height: 100%;
+  position: relative;
+  background: url("category-photo4.jpg") #2a5555 no-repeat center center scroll;
+  background-size: cover;
+}
+/*ここまで*/
+/*カレー料理のCSS*/
+.curry {
+  height: 100%;
+  position: relative;
+  background: url("category-photo5.jpg") #2a5555 no-repeat center center scroll;
+  background-size: cover;
+}
+/*ここまで*/
+/*居酒屋のCSS*/
+.Drink {
+  height: 100%;
+  position: relative;
+  background: url("category-photo7.jpg") #2a5555 no-repeat center center scroll;
+  background-size: cover;
+}
+/*ここまで*/
+
+
+
+
+/*新規登録のCSS*/
+.bg-image-full-new {
+  background: url(photo2.jpg) no-repeat;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: center;
+  background-size: cover;
+}
+.post-new {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0,0,0,0.6); 
+  height: 50vh
+}
+.form-control {
+  background-color:  #1E1E1F;
+  color: white;
+}
+.form-control:focus {
+  background-color:  #1E1E1F;
+}
+.shop-image {
+  display: inline;
+  width: 60%;
+  border: none;
+  padding: 0;
+  color: #fff;
+}
+select {
+  background-color:  #1E1E1F;
+  color: #fff;
+}
+.btn-info {
+  background-color:  #1E1E1F;
+
+}
+/*ここまで*/
