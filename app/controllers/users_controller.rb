@@ -10,10 +10,18 @@ class UsersController < ApplicationController
 
   def update
     @user = User.find(params[:id])
-    @user.update(user_params)
-    redirect_to user_path(@user.id)
-  end
+    # ユーザーに紐づいたプロフィール画像のblob情報を安全に取得
+    blob = @user.profile_image.attachment&.blob
   
+    if @user.update(user_params)
+      redirect_to user_path(@user.id)
+    else
+      # もし、すでにプロフィール画像が存在する場合は、そのプロフィール画像を再利用する
+      @user.profile_image.attachment.blob = blob if blob.present?
+      render :edit
+    end
+  end
+    
   private
 
   def user_params
