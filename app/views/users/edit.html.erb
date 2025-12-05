@@ -1,24 +1,71 @@
-<h2>プロフィール編集</h2>
+<div class="bg-image-full">
+  <div class="col-12 h-100 py-5" style="background-color: rgba(0,0,0,0.5);">
+    <div class="text-center my-5 py-5">
+      <% if @user.profile_image.attached? %>
+        <%= image_tag @user.profile_image.variant(resize_to_fill: [150, 150]), class: "img-fluid rounded-circle mb-4" %>
+      <% else %>
+        <%= image_tag "default-image.jpg", class: "img-fluid rounded-circle mb-4" %>
+      <% end %>
+      <h3 class="text-white fs-3 fw-bolder"><%= @user.name %></h3>
+    </div>
+  </div>
+</div>
 
-<% if @user.errors.any? %>
-  <%= @user.errors.count %>件のエラーが発生しました
-  <ul>
-  <% @user.errors.full_messages.each do |message| %>
-    <li><%= message %></li>
-  <% end %>
-  </ul>
-<% end %>gi
+<div class="page-section text-light" style="background-color:  #1E1E1F;" >
+  <div class="container px-4 px-lg-5">
+    <h2 class="text-center mt-0">Edit your profile</h2>
+    <hr class="divider mb-5"/>
 
-<%= form_with model:@user, local:true do |f| %>
-  <label for="inputName">Name</label>
-  <%= f.text_field :name, autofocus: true, id:"inputName", placeholder:"名前"%>
- 
-  <% if @user.profile_image.attached? %>
-    <%= image_tag @user.profile_image, size: "100x100" %>
-  <% else %>
-  <% end %>
-  <label for="inputImage">ProfileImage</label>
-  <%= f.file_field :profile_image, accept: "image/*", placeholder: "プロフィール画像" %>
- 
-  <%= f.submit "変更を保存" %>
-<% end %>
+      <!--バリデーションの設定-->
+      <div style="color: red;">
+        <% if @user.errors.any? %>
+          <h3 ><%= @user.errors.count %>件のエラーが発生しました</h3>
+          <ul style="list-style: none;">
+          <% @user.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+          </ul>
+        <% end %>      
+      </div>
+      
+    <%= form_with model:@user, local:true do |f| %>
+      <div class="form-group mt-3">
+        <label for="inputName">Name</label>
+        <%= f.text_field :name, class:"form-control", autofocus: true, id:"inputName", placeholder:"名前を入力してください"%>
+      </div>
+      <div class="form-group mb-3">
+        <label for="input-introduction">Introduction</label>
+        <%= f.text_area :introduction, class:"form-control", id:"input-introduction" %>
+      </div>
+      
+      <div class="form-group mb-3">
+        <label for="input-image">Current profile image</label><br>
+        <% if @user.profile_image.attached? %>
+          <%= image_tag @user.profile_image.variant(resize_to_fill: [100, 100]), id: "input-image", class: "img-fluid rounded-circle" %>
+        <% else %>
+          <%= image_tag "default-image.jpg", id: "input-image", class: "img-fluid rounded-circle" %>
+        <% end %>
+      </div>
+         
+      <div class="form-group mb-4">
+        <label for="InputImage">ProfileImage</label></br>
+        <%= f.label :profile_image, "Profile Image" %><br>
+        <%= f.file_field :profile_image, class: "form-control profile-image", id: "InputImage" %>
+      </div>
+      
+      <div class="form-check mb-4">
+        <input class="form-check-input" type="checkbox" value="option1" id="defaultCheck1">
+        <label class="form-check-label" for="defaultCheck1">
+          Check your edit!!
+        </label>
+      </div>
+      
+      
+      <%= f.submit "Edit my profile", class:"btn btn-lg btn-block btn-info mt-4 rounded" %>
+      
+    <% end %>
+    
+
+    <p class="text-center text-white-50"><%= @user.introduction %></p>
+  </div>
+</div>S
