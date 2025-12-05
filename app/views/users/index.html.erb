@@ -1,0 +1,184 @@
+<main>
+  <div class="main-User">
+    <!--メインビジュアルイメージ-->
+    <div class="masthead py-5">
+        <div class="masthead-content text-white">
+            <div class="container-fluid px-4 py-5 my-5 px-lg-0 text-center">
+                <h1 class="my-5 font-change">Welcome to the user page!!</h1>
+                <h2 class="mb-5 font-change">You can find the users you are interested in.</h2>
+            </div>
+        </div>
+    </div>
+    <div class="social-icons">
+        <div class="d-flex flex-row flex-lg-column justify-content-center align-items-center h-100 mt-3 mt-lg-0">
+            <a class="btn btn-dark m-3" href="#!"><i class="fab fa-twitter"></i></a>
+            <a class="btn btn-dark m-3" href="#!"><i class="fab fa-facebook-f"></i></a>
+            <a class="btn btn-dark m-3" href="#!"><i class="fab fa-instagram"></i></a>
+        </div>
+    </div>
+  </div>
+    <!--card-->
+  <div class="page-section px-5" style="background-color:  #1E1E1F;">
+    <div class="row">
+      <div class="col-lg-6 pt-5">
+        <div id="collection" class=" overflow-hidden">
+          <div class="container">
+          <h2 class="text-center text-light mt-0">Trendy shops</h2>
+          <hr class="divider"/>
+          <div class="row mt-5">
+            <!--リピート-->
+            <div class="col-sm-6 mb-4 image-zoom-effect">
+              <div class="collection-item position-relative mx-auto">
+                <div class="image-holder">
+                  <%= image_tag "about_photo1.jpg", class:"img-fluid", alt:"product" %>
+                  <div class="product-info position-absolute d-flex justify-content-center align-items-center">
+                    <div class="border d-flex justify-content-center align-items-center text-center">
+                      <div class="text-wrap">
+                        <h3 class="m-0">
+                          <a class="text-light">Yoru cafe</a>
+                        </h3>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6 mb-4 image-zoom-effect">
+              <div class="collection-item position-relative mx-auto">
+                <div class="image-holder">
+                  <%= image_tag "about_photo2.jpg", class:"img-fluid", alt:"product" %>
+                </div>
+                <div class="product-info position-absolute d-flex justify-content-center align-items-center">
+                  <div class="border d-flex justify-content-center align-items-center text-center">
+                    <div class="text-wrap">
+                      <h3 class="m-0">
+                        <a class="text-light">Night bar</a>
+                      </h3>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6 mb-4 image-zoom-effect">
+              <div class="collection-item position-relative mx-auto">
+                <div class="image-holder">
+                  <%= image_tag "about_photo3.jpg", class:"img-fluid", alt:"product" %>
+                </div>
+                <div class="product-info position-absolute d-flex justify-content-center align-items-center">
+                  <div class="border d-flex justify-content-center align-items-center text-center">
+                    <div class="text-wrap">
+                      <h3 class="m-0">
+                        <a  class="text-light">Earth camper</a>
+                      </h3>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6 mb-4 image-zoom-effect">
+              <div class="collection-item position-relative mx-auto">
+                <div class="image-holder">
+                  <%= image_tag "about_photo4.jpg", class:"img-fluid", alt:"product" %>
+                </div>
+                <div class="product-info position-absolute d-flex justify-content-center align-items-center">
+                  <div class="border d-flex justify-content-center align-items-center text-center">
+                    <div class="text-wrap">
+                      <h3 class="m-0">
+                        <a class="text-light">Saturn buffet</a>
+                      </h3>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+      <div class="col-lg-6 pt-5">
+        <div class="container-fluid text-white">
+          <h2 class="text-center mt-0">About this page</h2>
+          <hr class="divider"/>
+          <div class="row mt-5">
+            <div class="col-md-6 text-center">
+                <div class="mt-5 page-caption">
+                    <h1 class="mb-2"><i class="fa-solid fa-user"></i></h1>
+                    <h3 class="mb-2">User</h3>
+                    <p class="mb-0">You can find your favorite user!!</p>
+                </div>
+            </div>
+            <div class="col-md-6 text-center">
+                <div class="mt-5 page-caption">
+                    <h1 class="mb-2"><i class="fa-solid fa-right-to-bracket"></i></h1>
+                    <h3 class="mb-2">favorite</h3>
+                    <p class="mb-0">You can find out the favorite categories of various people.</p>
+                </div>
+            </div>
+            <div class="col-md-6 text-center">
+                <div class="mt-5 page-caption">
+                    <h1 class="mb-2"><i class="fa-solid fa-comment"></i></h1>
+                    <h3 class="mb-2">posts</h3>
+                    <p class="mb-0">You can see the number of posts posted by the user.</p>
+                </div>
+            </div>
+            <div class="col-md-6 text-center">
+                <div class="mt-5 page-caption">
+                    <h1 class="mb-2"><i class="fa-solid fa-heart"></i></h1>
+                    <h3 class="mb-2">More</h3>
+                    <p class="mb-0">You can move to the user's details page.</p>
+                </div>
+            </div>
+          </div>
+      </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="page-section" style="background-color:  #1E1E1F;">
+    <div class="jumbotron jumbotron-users p-0 m-0">
+      <div class="col-12 col-lg-5 text-center h-100" style="background-color: rgba(0,0,0,0.7); ">
+        <div class="proverb text-light">
+          <h2 class="font-change">People who love to eat are </br>
+            always best people.
+          </h2>
+          <h2 class="font-change">~ Julia Child ~</h2>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section class="page-section" style="background-color:  #1E1E1F;">
+    <div class="container">
+      <h2 class="text-center text-light mt-0">User list</h2>
+      <hr class="divider"/>
+      <div class="row mt-5">
+        <% @users.each do |user| %>
+          <div class="col-sm-6 col-md-4 mb-4 col-lg-3">
+            <div class="card h-100 text-white shadow overflow-hidden rounded" style="background-color: #000;">
+                <%= image_tag(
+                      user.profile_image.attached? ? url_for(user.profile_image) : "photo1.jpg",
+                      class: "h-50 overflow-hidden",
+                      style: "background-size: cover;"
+                    ) %>
+                <div class="card-body">
+                    <p class="card-title">
+                      <i class="fa-solid fa-user"></i>  <%= user.name %>
+                    </p>
+                    <p class="card-text">
+                      <i class="fa-solid fa-heart"></i> favorite category
+                    </p>
+                    <p class="card-text">
+                      <i class="fa-solid fa-arrow-up-from-bracket"></i> <%= user.posts.count %>Posts
+                    </p>
+                    <%= link_to user_path(user), class:"btn btn-sm btn-block btn-primary" do %>
+                      More
+                    <% end %>
+                </div>
+            </div>
+          </div>
+
+        <% end %>
+      </div>
+    </div>
+  </section>
+</main>
