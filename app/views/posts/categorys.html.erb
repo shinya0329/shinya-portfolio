@@ -1,0 +1,254 @@
+<main>
+  <div class="main-categorys">
+    <!--メインビジュアルイメージ-->
+    <div class="masthead py-5">
+        <div class="masthead-content text-white">
+            <div class="container-fluid px-4 py-5 my-5 px-lg-0 text-center">
+                <h1 class="my-5 font-change fadeInDown">Welcome Categorys Page!!</h1>
+                <h2 class="mb-5 font-change fadeInDown">Let's find your favorite food category</h2>
+            </div>
+        </div>
+    </div>
+    <div class="social-icons">
+        <div class="d-flex flex-row flex-lg-column justify-content-center align-items-center h-100 mt-3 mt-lg-0">
+            <a class="btn btn-dark m-3" href="#!"><i class="fab fa-twitter"></i></a>
+            <a class="btn btn-dark m-3" href="#!"><i class="fab fa-facebook-f"></i></a>
+            <a class="btn btn-dark m-3" href="#!"><i class="fab fa-instagram"></i></a>
+        </div>
+    </div>
+  </div>
+  <section id="collection" class="page-section overflow-hidden" style="background-color: #1E1E1F;">
+    <div class="container py-5">
+      <h3 class="text-center text-light mt-0">Category list</h3>
+      <hr class="divider"/>
+      <div class="row my-5 justify-content-center">
+        <!--リピート-->
+        <div class="col-lg-3 col-sm-6 mb-4 image-zoom-effect">
+          <div class="collection-item position-relative mx-auto">
+            <div class="image-holder">
+              <%= image_tag "category-japan.jpg", class:"img-fluid", alt:"product" %>
+              <div class="product-info position-absolute d-flex justify-content-center align-items-center">
+                <div class="border d-flex justify-content-center align-items-center text-center">
+                  <div class="text-wrap">
+                    <h3 class="m-0 text-light">
+                      <%= link_to "和食", "/posts/category/JapaneseFood", style:"color: white;" %>
+                    </h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-sm-6 mb-4 image-zoom-effect">
+          <div class="collection-item position-relative mx-auto">
+            <div class="image-holder">
+              <%= image_tag "category-western.jpg", class:"img-fluid", alt:"product" %>
+            </div>
+            <div class="product-info position-absolute d-flex justify-content-center align-items-center">
+              <div class="border d-flex justify-content-center align-items-center text-center">
+                <div class="text-wrap">
+                  <h3 class="m-0 text-light">
+                    <%= link_to "洋食・西洋料理", "/posts/category/WesternCuisine", style:"color: white;" %>
+                  </h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-sm-6 mb-4 image-zoom-effect">
+          <div class="collection-item position-relative mx-auto">
+            <div class="image-holder">
+              <%= image_tag "category-china.jpg", class:"img-fluid", alt:"product" %>
+            </div>
+            <div class="product-info position-absolute d-flex justify-content-center align-items-center">
+              <div class="border d-flex justify-content-center align-items-center text-center">
+                <div class="text-wrap">
+                  <h3 class="m-0 text-light">
+                    <%= link_to "中華料理", "/posts/category/ChineseFood", style:"color: white;" %>
+                  </h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-sm-6 mb-4 image-zoom-effect">
+          <div class="collection-item position-relative mx-auto">
+            <div class="image-holder">
+              <%= image_tag "category-photo4.jpg", class:"img-fluid", alt:"product" %>
+            </div>
+            <div class="product-info position-absolute d-flex justify-content-center align-items-center">
+              <div class="border d-flex justify-content-center align-items-center text-center">
+                <div class="text-wrap">
+                  <h3 class="m-0 text-light">
+                    <%= link_to "アジア・エスニック料理", "/posts/category/AsianFood", style:"color: white;" %>
+                  </h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-sm-6 mb-4 image-zoom-effect">
+          <div class="collection-item position-relative mx-auto">
+            <div class="image-holder">
+              <%= image_tag "category-photo5.jpg", class:"img-fluid", alt:"product" %>
+            </div>
+            <div class="product-info position-absolute d-flex justify-content-center align-items-center">
+              <div class="border d-flex justify-content-center align-items-center text-center">
+                <div class="text-wrap">
+                  <h3 class="m-0 text-light">
+                    <%= link_to "カレー", "/posts/category/Curry", style:"color: white;" %>
+                  </h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-sm-6 mb-4 image-zoom-effect">
+          <div class="collection-item position-relative mx-auto">
+            <div class="image-holder">
+              <%= image_tag "category-photo6.jpg", class:"img-fluid", alt:"product" %>
+            </div>
+            <div class="product-info position-absolute d-flex justify-content-center align-items-center">
+              <div class="border d-flex justify-content-center align-items-center text-center">
+                <div class="text-wrap">
+                  <h3 class="m-0">
+                    <%= link_to "焼き肉・ステーキ", "/posts/category/Meat", style:"color: white;" %>
+                  </h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-sm-6 mb-4 image-zoom-effect">
+          <div class="collection-item position-relative mx-auto">
+            <div class="image-holder">
+              <%= image_tag "category-photo7.jpg", class:"img-fluid", alt:"product" %>
+            </div>
+            <div class="product-info position-absolute d-flex justify-content-center align-items-center">
+              <div class="border d-flex justify-content-center align-items-center text-center">
+                <div class="text-wrap">
+                  <h3 class="m-0">
+                    <%= link_to "居酒屋", "/posts/category/Drink", style:"color: white;" %>
+                  </h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-sm-6 mb-4 image-zoom-effect">
+          <div class="collection-item position-relative mx-auto">
+            <div class="image-holder">
+              <%= image_tag "category-cafe.jpg", class:"img-fluid", alt:"product" %>
+            </div>
+            <div class="product-info position-absolute d-flex justify-content-center align-items-center">
+              <div class="border d-flex justify-content-center align-items-center text-center">
+                <div class="text-wrap">
+                  <h3 class="m-0">
+                    <%= link_to "カフェ・喫茶店", "/posts/category/Cafe", style:"color: white;" %>
+                  </h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-sm-6 mb-4 image-zoom-effect">
+          <div class="collection-item position-relative mx-auto">
+            <div class="image-holder">
+              <%= image_tag "category-sweets.jpg", class:"img-fluid", alt:"product" %>
+            </div>
+            <div class="product-info position-absolute d-flex justify-content-center align-items-center">
+              <div class="border d-flex justify-content-center align-items-center text-center">
+                <div class="text-wrap">
+                  <h3 class="m-0">
+                    <%= link_to "スイーツ・ベーカリー", "/posts/category/Sweets", style:"color: white;" %>
+                  </h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-sm-6 mb-4 image-zoom-effect">
+          <div class="collection-item position-relative mx-auto">
+            <div class="image-holder">
+              <%= image_tag "category-noodles.jpg", class:"img-fluid", alt:"product" %>
+            </div>
+            <div class="product-info position-absolute d-flex justify-content-center align-items-center">
+              <div class="border d-flex justify-content-center align-items-center text-center">
+                <div class="text-wrap">
+                  <h3 class="m-0">
+                    <%= link_to "ラーメン・麺類", "/posts/category/Noodles", style:"color: white;" %>
+                  </h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-sm-6 mb-4 image-zoom-effect">
+          <div class="collection-item position-relative mx-auto">
+            <div class="image-holder">
+              <%= image_tag "category-bar.jpg", class:"img-fluid", alt:"product" %>
+            </div>
+            <div class="product-info position-absolute d-flex justify-content-center align-items-center">
+              <div class="border d-flex justify-content-center align-items-center text-center">
+                <div class="text-wrap">
+                  <h3 class="m-0">
+                    <%= link_to "Bar(バー)", "/posts/category/Bar", style:"color: white;" %>
+                  </h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-sm-6 mb-4 image-zoom-effect">
+          <div class="collection-item position-relative mx-auto">
+            <div class="image-holder">
+              <%= image_tag "category-buffet.jpg", class:"img-fluid", alt:"product" %>
+            </div>
+            <div class="product-info position-absolute d-flex justify-content-center align-items-center">
+              <div class="border d-flex justify-content-center align-items-center text-center">
+                <div class="text-wrap">
+                  <h3 class="m-0">
+                    ><%= link_to "ビュッフェ・バイキング", "/posts/category/Buffet", style:"color: white;" %>
+                  </h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-sm-6 mb-4 image-zoom-effect">
+          <div class="collection-item position-relative mx-auto">
+            <div class="image-holder">
+              <%= image_tag "category-fastfood.jpg", class:"img-fluid", alt:"product" %>
+            </div>
+            <div class="product-info position-absolute d-flex justify-content-center align-items-center">
+              <div class="border d-flex justify-content-center align-items-center text-center">
+                <div class="text-wrap">
+                  <h3 class="m-0">
+                    <%= link_to "ファミレス・ファストフード", "/posts/category/Family", style:"color: white;" %>
+                  </h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-sm-6 mb-4 image-zoom-effect">
+          <div class="collection-item position-relative mx-auto">
+            <div class="image-holder">
+              <%= image_tag "category-other.jpg", class:"img-fluid", alt:"product" %>
+            </div>
+            <div class="product-info position-absolute d-flex justify-content-center align-items-center">
+              <div class="border d-flex justify-content-center align-items-center text-center">
+                <div class="text-wrap">
+                  <h3 class="m-0">
+                    <%= link_to "その他飲食店", "/posts/category/Restaurant", style:"color: white;" %>
+                  </h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
