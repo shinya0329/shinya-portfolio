@@ -1,20 +1,67 @@
-<h1>画像投稿フォーム</h1>
 
-<% if @post.errors.any? %>
-  <%= @post.errors.count %>件のエラーが発生しました
-  <ul>
-  <% @post.errors.full_messages.each do |message| %>
-    <li><%= message %></li>
-  <% end %>
-  </ul>
-<% end %>
-
-<%= form_with model: @post, local:true do |f| %>
-  <h4>画像</h4>
-  <%= f.file_field :image, accept: "image/*" %>
-  <h4>ショップ名</h4>
-  <%= f.text_field :shop_name %>
-  <h4>説明</h4>
-  <%= f.text_area :caption %>
-  <%= f.submit '投稿' %>
-<% end %>
+  <div class="bg-image-full-new">
+    <div class="col-12 py-5 post-new">
+      <div class="text-center my-5">
+        <div class="proverb text-light text-align-center">
+          <h1 class="font-change">One cannnot think well, love well,</br>
+            sleep well, if one has not dined well.
+          </h1>
+          <h2 class="font-change">~Virfinia Woolf~</h2>
+        </div>
+      </div>
+    </div>
+</div>
+  <div class="page-section text-white" style="background-color:  #1E1E1F;" >
+    <div class="container px-4 px-lg-5">
+      <h2 class="text-center mt-0">Let's create New post!</h2>
+      <hr class="divider mb-5"/>
+      <!--バリデーションの設定-->
+      <div style="color: red;">
+        <% if @post.errors.any? %>
+          <h3 ><%= @post.errors.count %>件のエラーが発生しました</h3>
+          <ul style="list-style: none;">
+          <% @post.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+          </ul>
+        <% end %>      
+      </div>
+      
+      <%= form_with model:@post, local:true do |f| %>
+        <div class="form-group mt-3">
+          <label for="input-shop-name">Shop Name</label>
+          <%= f.text_field :shop_name, class:"form-control", autofocus: true, id:"input-shop-name", placeholder:"Please write shop name" %>
+        </div>
+        <div class="form-group mb-3">
+          <label for="input-caption">Caption</label>
+          <%= f.text_area :caption, class:"form-control", id:"input-caption", placeholder:"Please write shop caption" %>
+        </div>
+  
+        <div class="form-group mb-3">
+          <label for="input-shop-image">Shop Image</label></br>
+          <%= f.file_field :image, class: "form-control bg-dark text-white border-secondary", id: "input-shop-image" %>
+        </div>
+  
+        <div class="form-group mb-4">
+          <label for="input-category">Category</label>
+          <div data-spy="scroll" data-offset="0">
+            <%= f.select :category, [["和食", "1"], ["洋食・西洋料理", "2"], ["中華料理", "3"], ["アジア・エスニック料理", "4"], ["カレー", "5"], ["焼肉・ステーキ", "6"], ["居酒屋", "7"], ["カフェ・喫茶店", "8"], ["スイーツ・ベーカリー", "9"], ["ラーメン・麺類", "10"], ["Bar(バー）", "11"], ["ビュッフェ・バイキング", "12"], ["ファミレス・ファストフード", "13"], ["その他飲食店", "14"]], { id:"input-category" , class: "form-control", include_blank: "カテゴリを選択してください" }, required: true %>
+          </div>
+        </div>
+  
+        <div class="form-check mb-5">
+          <input class="form-check-input" type="checkbox" value="option1" id="defaultCheck1">
+          <label class="form-check-label" for="defaultCheck1">
+            Check your post!!
+          </label>
+        </div>
+  
+        <div class="form-group">
+          <%= f.submit "Create New Post", class:"btn btn-lg btn-block btn-info mt-4 rounded" %>
+        </div>
+      <% end %>
+  
+  
+    </div>
+</div>
+</main>
