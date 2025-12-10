@@ -1,0 +1,58 @@
+<% if @category == "JapaneseFood" %>
+<!--和食ページの部分テンプレート-->
+  <%= render 'posts/japanesefood', posts: @posts %>
+
+<% elsif @category == "WesternCuisine" %>
+<!--洋食料理の部分テンプレート-->
+  <%= render 'posts/WesternCuisine', posts: @posts %>
+
+<% elsif @category == "ChineseFood" %>
+<!--中華料理の部分テンプレート-->
+  <%= render 'posts/chinese', posts: @posts %>
+
+<% elsif @category == "AsianFood" %>
+<!--アジア料理の部分テンプレート-->
+  <%= render 'posts/asianFood', posts: @posts %>
+
+<% elsif @category == "Curry" %>
+<!--カレー料理の部分テンプレート-->
+  <%= render 'posts/curry', posts: @posts %>
+
+<% elsif @category == "Meat" %>
+<!--肉料理の部分テンプレート-->
+  <%= render 'posts/Meat', posts: @posts %>
+
+<% elsif @category == "Drink" %>
+<!--居酒屋の部分テンプレート-->
+  <%= render 'posts/Drink', posts: @posts %>
+
+<% elsif @category == "Cafe" %>
+<!--カフェの部分テンプレート-->
+  <%= render 'posts/Cafe', posts: @posts %>
+
+<% elsif @category == "Sweets" %>
+<!--スイーツの部分テンプレート-->
+  <%= render 'posts/Sweets', posts: @posts %>
+
+<% elsif @category == "Noodles" %>
+<!--麺類の部分テンプレート-->
+  <%= render 'posts/Noodles', posts: @posts %>
+
+<% elsif @category == "Bar" %>
+<!--barの部分テンプレート-->
+  <%= render 'posts/Bar', posts: @posts %>
+
+<% elsif @category == "Buffet" %>
+<!--buffetのの部分テンプレート-->
+  <%= render 'posts/Buffet', posts: @posts %>
+
+<% elsif @category == "Family" %>
+<!--familyのの部分テンプレート-->
+  <%= render 'posts/Family', posts: @posts %>
+
+<% elsif @category == "Restaurant" %>
+<!--restaurantのの部分テンプレート-->
+  <%= render 'posts/Restaurant', posts: @posts %>
+
+
+<% end %>

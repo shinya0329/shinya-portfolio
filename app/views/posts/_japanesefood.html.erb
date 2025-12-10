@@ -1,0 +1,53 @@
+<div class="japanesefood">
+  <!--メインビジュアルイメージ-->
+  <div class="masthead py-5">
+      <div class="masthead-content text-white">
+          <div class="container-fluid px-4 py-5 my-5 px-lg-0 text-center">
+              <h1 class="my-5 font-change fadeInDown">Welcome Category Page!!</h1>
+              <h2 class="mb-5 font-change fadeInDown">Let's find your favorite shop!!</h2>
+          </div>
+      </div>
+  </div>
+  <div class="social-icons">
+      <div class="d-flex flex-row flex-lg-column justify-content-center align-items-center h-100 mt-3 mt-lg-0">
+          <a class="btn btn-dark m-3" href="#!"><i class="fab fa-twitter"></i></a>
+          <a class="btn btn-dark m-3" href="#!"><i class="fab fa-facebook-f"></i></a>
+          <a class="btn btn-dark m-3" href="#!"><i class="fab fa-instagram"></i></a>
+      </div>
+  </div>
+</div>
+
+<section class="page-section"  style="background-color:  #1E1E1F;">
+  <div class="container-xxl py-5">
+    <div class="container">
+    <h2 class="text-center text-light mt-0">JapaneseFood</h2>
+    <hr class="divider"/>
+      <div class="row mt-5 g-4">
+        <% posts.each do |post| %>
+          <div class="col-sm-6 col-lg-4">
+              <div class="service-item rounded overflow-hidden mb-5 shadow" style="background-color:  black; color: #fff;">
+                  <%= image_tag(post.image.attached? ? url_for(post.image) : "photo1.jpg", class: "w-100 overflow-hidden", style: "max-height: 200px;") %>
+                  <div class="user-item position-relative p-3 pt-0">
+                      <div class="user-icon">
+                      <%= image_tag(
+                            post.user.profile_image.attached? ? url_for(post.user.profile_image) : "photo1.jpg",
+                            class: "rounded-circle",
+                            size: "100x100"
+                          ) %>
+                      </div>
+                      <h4 class="mb-3 shop-name"><%= post.shop_name %></h4>
+                      <p><%= post.caption %></p>
+                      <span><i class="fas fa-user"></i> By <%= post.user.name %> ｜ </span>
+                      <span><%= link_to "#{post.post_comments.count} コメント", post_path(post.id), class:"text-white" %></span></br>
+                      <%=link_to post_path(post.id), class:"small" do %>
+                        Read More<i class="fa fa-arrow-right ms-2"></i>
+                      <% end %>
+                  </div>
+              </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</section>
+<%= paginate posts %>
